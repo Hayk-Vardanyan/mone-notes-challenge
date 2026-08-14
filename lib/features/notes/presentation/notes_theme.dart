@@ -50,15 +50,28 @@ class NotesTextStyles {
   );
 
   static const editorTitle = TextStyle(
-    fontSize: 28,
+    fontSize: 35,
     fontWeight: FontWeight.w600,
     color: NotesColors.textPrimary,
   );
 
+  static const editorTitleHint = TextStyle(
+    fontSize: 35,
+    fontWeight: FontWeight.w400,
+    color: NotesColors.textMuted,
+  );
+
   static const editorBody = TextStyle(
-    fontSize: 17,
+    fontSize: 23,
     fontWeight: FontWeight.w400,
     color: NotesColors.textPrimary,
+    height: 1.5,
+  );
+
+  static const editorBodyHint = TextStyle(
+    fontSize: 23,
+    fontWeight: FontWeight.w400,
+    color: NotesColors.textMuted,
     height: 1.5,
   );
 

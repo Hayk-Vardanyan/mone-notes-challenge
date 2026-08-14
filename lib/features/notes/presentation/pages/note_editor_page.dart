@@ -7,7 +7,6 @@ import '../../data/models/note.dart';
 import '../notes_theme.dart';
 import '../stores/notes_store.dart';
 import '../widgets/editor_exit_dialogs.dart';
-import '../widgets/formatting_toolbar.dart';
 import '../widgets/notes_icon_button.dart';
 import '../widgets/responsive_page_body.dart';
 
@@ -139,7 +138,9 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
                       const Spacer(),
                       NotesIconButton(
                         icon: _isFavorite ? Icons.star : Icons.star_border,
-                        iconColor: _isFavorite ? NotesColors.favorite : NotesColors.textPrimary,
+                        iconColor: _isFavorite
+                            ? NotesColors.favorite
+                            : NotesColors.textPrimary,
                         semanticLabel: 'Toggle favorite',
                         onTap: () => setState(() => _isFavorite = !_isFavorite),
                       ),
@@ -156,42 +157,38 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 28),
                   TextField(
                     controller: _titleController,
                     style: NotesTextStyles.editorTitle,
+                    cursorColor: NotesColors.accent,
                     maxLines: null,
                     decoration: const InputDecoration(
                       border: InputBorder.none,
                       isDense: true,
                       contentPadding: EdgeInsets.zero,
                       hintText: 'Title',
-                      hintStyle: TextStyle(
-                        color: NotesColors.textMuted,
-                        fontSize: 28,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      hintStyle: NotesTextStyles.editorTitleHint,
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 24),
                   Expanded(
                     child: SingleChildScrollView(
                       child: TextField(
                         controller: _bodyController,
                         style: NotesTextStyles.editorBody,
+                        cursorColor: NotesColors.accent,
                         maxLines: null,
                         decoration: const InputDecoration(
                           border: InputBorder.none,
                           isDense: true,
                           contentPadding: EdgeInsets.zero,
                           hintText: 'Type something...',
-                          hintStyle: TextStyle(color: NotesColors.textMuted, fontSize: 17),
+                          hintStyle: NotesTextStyles.editorBodyHint,
                         ),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 12),
-                  const FormattingToolbar(),
                   const SizedBox(height: 12),
                 ],
               ),
