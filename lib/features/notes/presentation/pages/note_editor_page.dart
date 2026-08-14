@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/navigation/app_navigator.dart';
 import '../../../../injectable.dart';
 import '../../data/models/note.dart';
 import '../notes_theme.dart';
@@ -100,8 +99,6 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
 
   @override
   Widget build(BuildContext context) {
-    final navigator = getIt<AppNavigator>();
-
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, result) async {
@@ -109,8 +106,11 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
           return;
         }
         final shouldPop = await _handleBackRequest();
+        // A forced pop, unlike AppNavigator.pop()'s maybePop, bypasses
+        // PopScope instead of re-triggering this same callback and
+        // recursing forever.
         if (shouldPop && context.mounted) {
-          navigator.pop();
+          Navigator.of(context).pop();
         }
       },
       child: Scaffold(
@@ -128,12 +128,10 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
                       NotesIconButton(
                         icon: Icons.chevron_left,
                         semanticLabel: 'Back',
-                        onTap: () async {
-                          final shouldPop = await _handleBackRequest();
-                          if (shouldPop && context.mounted) {
-                            navigator.pop();
-                          }
-                        },
+                        // Goes through the same PopScope confirmation flow
+                        // as the system back gesture instead of duplicating
+                        // it here.
+                        onTap: () => Navigator.maybePop(context),
                       ),
                       const Spacer(),
                       NotesIconButton(
@@ -151,7 +149,7 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
                         onTap: () async {
                           await _save();
                           if (context.mounted) {
-                            navigator.pop();
+                            Navigator.of(context).pop();
                           }
                         },
                       ),
