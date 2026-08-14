@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Design tokens consumed by flutter_gen (`AppColors` in lib/gen/colors.gen.dart).
+  These are neutral placeholders: replace the values with the product palette.
+-->
+<resources>
+    <!-- Brand -->
+    <color name="primary">#3B82F6</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Status -->
+    <color name="error">#DC2626</color>
+    <color name="success">#16A34A</color>
+
+    <!-- Neutrals -->
+    <color name="transparent">#00000000</color>
+    <color name="gray1">#6B7280</color>
+    <color name="gray3">#9CA3AF</color>
+
+    <!-- Light theme -->
+    <color name="light_text_main">#111827</color>
+    <color name="light_text_secondary">#4B5563</color>
+    <color name="light_text_tertiary">#9CA3AF</color>
+    <color name="light_text_accent">#3B82F6</color>
+    <color name="light_background_main">#FFFFFF</color>
+    <color name="light_surface">#F3F4F6</color>
+    <color name="light_divider">#E5E7EB</color>
+    <color name="light_button_background_disabled">#E5E7EB</color>
+
+    <!-- Dark theme -->
+    <color name="dark_text_main">#F9FAFB</color>
+    <color name="dark_text_secondary">#D1D5DB</color>
+    <color name="dark_text_tertiary">#9CA3AF</color>
+    <color name="dark_text_accent">#60A5FA</color>
+    <color name="dark_background_main">#0B0F19</color>
+    <color name="dark_surface">#111827</color>
+    <color name="dark_divider">#1F2937</color>
+    <color name="dark_button_background_disabled">#1F2937</color>
+</resources>

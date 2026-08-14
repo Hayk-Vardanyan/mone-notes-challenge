@@ -1,0 +1,6 @@
+{
+  "apiUrl": "https://api.example.com",
+  "env": "DEVELOPMENT",
+  "production": false,
+  "bundleID": "com.example.notes_app"
+}
