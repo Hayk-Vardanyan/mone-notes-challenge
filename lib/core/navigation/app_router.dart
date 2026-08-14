@@ -16,6 +16,9 @@ class AppRouter extends RootStackRouter {
       page: HomeRoute.page,
       guards: [const AuthGuard()],
     ),
+    AutoRoute(path: '/search', page: SearchRoute.page),
+    AutoRoute(path: '/notes/new', page: NoteEditorRoute.page),
+    AutoRoute(path: '/notes/:noteId', page: NoteReadingRoute.page),
   ];
 }
 
