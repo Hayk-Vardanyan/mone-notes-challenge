@@ -165,6 +165,11 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
                     maxLines: null,
                     decoration: const InputDecoration(
                       border: InputBorder.none,
+                      enabledBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none,
+                      disabledBorder: InputBorder.none,
+                      errorBorder: InputBorder.none,
+                      focusedErrorBorder: InputBorder.none,
                       isDense: true,
                       contentPadding: EdgeInsets.zero,
                       hintText: 'Title',
@@ -181,6 +186,11 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
                         maxLines: null,
                         decoration: const InputDecoration(
                           border: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          disabledBorder: InputBorder.none,
+                          errorBorder: InputBorder.none,
+                          focusedErrorBorder: InputBorder.none,
                           isDense: true,
                           contentPadding: EdgeInsets.zero,
                           hintText: 'Type something...',

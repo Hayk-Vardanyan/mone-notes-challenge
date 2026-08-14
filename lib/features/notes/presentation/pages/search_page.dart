@@ -135,6 +135,11 @@ class _SearchField extends StatelessWidget {
                 hintText: 'Search by the keyword...',
                 hintStyle: const TextStyle(color: NotesColors.textMuted, fontSize: 17),
                 border: InputBorder.none,
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                disabledBorder: InputBorder.none,
+                errorBorder: InputBorder.none,
+                focusedErrorBorder: InputBorder.none,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
                 suffixIcon: ValueListenableBuilder(
                   valueListenable: controller,
