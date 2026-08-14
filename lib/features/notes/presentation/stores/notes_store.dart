@@ -4,7 +4,7 @@ import 'package:injectable/injectable.dart';
 import 'package:mobx/mobx.dart';
 
 import '../../data/models/note.dart';
-import '../../data/repositories/notes_repository.dart';
+import '../../domain/repositories/notes_repository.dart';
 
 part 'notes_store.g.dart';
 

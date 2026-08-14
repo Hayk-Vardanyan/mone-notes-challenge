@@ -3,13 +3,8 @@ import 'dart:convert';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../domain/repositories/notes_repository.dart';
 import '../models/note.dart';
-
-abstract interface class NotesRepository {
-  Future<List<Note>> loadNotes();
-
-  Future<void> saveNotes(List<Note> notes);
-}
 
 /// Notes are plain title/body strings with no sync target, so the whole list
 /// is persisted as one JSON blob on every mutation instead of per-row storage.

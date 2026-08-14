@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:notes_app/core/navigation/app_navigator.dart';
 import 'package:notes_app/features/notes/data/models/note.dart';
-import 'package:notes_app/features/notes/data/repositories/notes_repository.dart';
+import 'package:notes_app/features/notes/domain/repositories/notes_repository.dart';
 import 'package:notes_app/features/notes/presentation/pages/notes_list_page.dart';
 import 'package:notes_app/features/notes/presentation/stores/notes_store.dart';
 import 'package:notes_app/injectable.dart';
