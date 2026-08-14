@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:notes_app/features/notes/presentation/widgets/formatting_toolbar.dart';
 
 import '../../../../injectable.dart';
 import '../../data/models/note.dart';
@@ -197,6 +198,8 @@ class _NoteEditorPageState extends State<NoteEditorPage> {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 12),
+                  FormattingToolbar(),
                   const SizedBox(height: 12),
                 ],
               ),

@@ -12,9 +12,10 @@ class AddNoteFab extends StatelessWidget {
     return FloatingActionButton(
       onPressed: onPressed,
       backgroundColor: NotesColors.accent,
+      foregroundColor: Colors.white,
       elevation: 4,
       shape: const CircleBorder(),
-      child: const Icon(Icons.add, color: NotesColors.onCard, size: 32),
+      child: const Icon(Icons.add, color: Colors.white, size: 32),
     );
   }
 }
