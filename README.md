@@ -2,7 +2,6 @@
 
 A small local notes app built from the [Notes App UI Figma prototype](https://www.figma.com/design/bqlPzHETqc3WPr0wdGoBH2/Notes-App-UI--M-one-task---Copy-) for the M-One Flutter Challenge.
 
-**Level applying for:** Mid-level Flutter engineer.
 
 ## Running it
 
